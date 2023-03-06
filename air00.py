@@ -34,7 +34,7 @@ error_handling(sys.argv)
 
 string_reçu = sys.argv[1]
 
-string_separateur_def = [" ", "\t", "\n"]
+string_separateur_def = " \t\n"
 
 
 ## Resolution
