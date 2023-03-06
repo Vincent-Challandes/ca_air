@@ -13,11 +13,11 @@ def fonction_split(string_a_couper, string_separateur):
     for i in range(len(string_a_couper)):
         if string_a_couper[i] in string_separateur:
             array_split.append(string_a_couper[index_debut:i])
-            index_debut =   i + 1
+            index_debut =   i + 1         
         # permet d'ajouter la dernière découpe de string
-        elif string_a_couper[i] == string_a_couper[-1]:
+        elif i == len(string_a_couper) - 1:
             # [index_debut  i + 1] +1 pour intégrer la dernière lettre de la string
-            array_split.append(string_a_couper[index_debut:i + 1])
+            array_split.append(string_a_couper[index_debut:i + 1])         
     return array_split
 
 def print_array(array):
@@ -34,7 +34,7 @@ error_handling(sys.argv)
 
 string_reçu = sys.argv[1]
 
-string_separateur_def = " \t\n"
+string_separateur_def = [" ", "\t", "\n"]
 
 
 ## Resolution
