@@ -51,7 +51,7 @@ def sorted_fusion(array1, array2):
             if array1[j] > i:
                 array1.insert(j, i)
                 break
-            elif j == len(array1) - 1 and array1[j] < i:
+            elif j == len(array1) - 1 and array1[j] <= i:
                 array1.insert(j + 1, i)
             
     return array1
