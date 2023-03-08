@@ -33,10 +33,11 @@ def selection_sort(array):
 def sorted_insert(array, new_element):
     new_element = int(new_element)
     for i in range(len(array)):
+        array[i] = int(array[i])
         if array[i] > new_element:
             array.insert(i, new_element)
             break
-        elif i == len(array) and array[i] < new_element:
+        elif i == len(array) - 1 and array[i] <= new_element:
             array.insert(i + 1, new_element)
     return array
 
