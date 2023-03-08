@@ -23,9 +23,7 @@ def left_turn(array):
 
 def print_array(array):
     for i in range(len(array)):
-        if len(array) == 1:
-            print(array[i])
-        elif i == len(array) -1:
+        if i == len(array) -1:
             print(array[i])
         else:
             print(array[i], end= ", ")
