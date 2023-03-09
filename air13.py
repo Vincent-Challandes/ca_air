@@ -50,7 +50,7 @@ def test(array):
             result = subprocess.run(["python3", programme, "Bonjour", "les", "gars"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Error! \n":
+            if result.stdout == "Error!\n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
@@ -349,10 +349,10 @@ def test(array):
             count_test = 0
 
             # test1
-            result = subprocess.run(["python3", programme, "Bonjour les gars"], capture_output=True, text=True)
+            result = subprocess.run(["python3", programme, "essay.txt"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Bonjour\n" "les\n" "gars\n":
+            if result.stdout == "Salut les gars \n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
@@ -362,7 +362,7 @@ def test(array):
             result = subprocess.run(["python3", programme, "Bonjour", "les", "gars"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Error! \n":
+            if result.stdout == "Error!\n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
@@ -378,20 +378,20 @@ def test(array):
             count_test = 0
 
             # test1
-            result = subprocess.run(["python3", programme, "Bonjour les gars"], capture_output=True, text=True)
+            result = subprocess.run(["python3", programme, "Bonjour les gars", "455"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Bonjour\n" "les\n" "gars\n":
+            if result.stdout == "Error first arg need only 1 caractere\n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
                 print(f"{programme} ({count_test}/2) : \033[31m" + "failure" + "\033[0m")
 
             # test2
-            result = subprocess.run(["python3", programme, "Bonjour", "les", "gars"], capture_output=True, text=True)
+            result = subprocess.run(["python3", programme, "B", "les"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Error! \n":
+            if result.stdout == "Error second arg have to be number!\n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
@@ -407,10 +407,10 @@ def test(array):
             count_test = 0
 
             # test1
-            result = subprocess.run(["python3", programme, "Bonjour les gars"], capture_output=True, text=True)
+            result = subprocess.run(["python3", programme, "6", "5", "4", "3", "2", "1"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Bonjour\n" "les\n" "gars\n":
+            if result.stdout == "1 2 3 4 5 6 \n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
@@ -420,7 +420,7 @@ def test(array):
             result = subprocess.run(["python3", programme, "Bonjour", "les", "gars"], capture_output=True, text=True)
             count_test += 1
             # ATTENTION pas oublié les retour à la ligne "\n"
-            if result.stdout == "Error! \n":
+            if result.stdout == "Error not digit!\n":
                 count_success += 1
                 print(f"{programme} ({count_test}/2) : \033[32m" + "success" + "\033[0m")
             else:
