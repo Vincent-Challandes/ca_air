@@ -9,6 +9,7 @@ def error_handling(array):
     for i in array:
         if not script_exist(i):
             print(f"Error {i} not found")
+            sys.exit()
 
 
 def script_exist(fichier_script):
