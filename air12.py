@@ -12,6 +12,7 @@ def error_handling(arguments):
             sys.exit()
 
 def my_quick_sort(array):
+    # permet de retourner le nombre une fois qu'il est à la bonne place
     if len(array) <= 1:
         return array
     else:
